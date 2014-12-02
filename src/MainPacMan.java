@@ -7,19 +7,12 @@ import org.lwjgl.*;
 public class MainPacMan {
 
 	public MainPacMan(){
-		try{
-			Display.setDisplayMode(new DisplayMode(640, 480));
-			Display.setTitle("PacMan");
-			Display.create();
-		}
-		catch (LWJGLException e) {
-			e.printStackTrace();
-		}
 		
-		while (!Display.isCloseRequested()) {
-			Display.update();
-			Display.sync(60);
-		}
+		Renderer.initializeDisplay();
+		Renderer.initializeMatrices();
+		Renderer.loadMedia();
+		
+		Renderer.gameLoop();
 		
 		Display.destroy();
 	}
@@ -27,5 +20,4 @@ public class MainPacMan {
 	public static void main(String[] args) {
 		new MainPacMan();
 	}
-
 }

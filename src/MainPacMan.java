@@ -9,7 +9,7 @@ public class MainPacMan {
 	public MainPacMan(){
 		
 		Renderer.initializeDisplay();
-		Renderer.initializeMatrices();
+		Renderer.setUpOpenGl();
 		Renderer.loadMedia();
 		
 		Renderer.gameLoop();

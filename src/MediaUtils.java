@@ -13,7 +13,7 @@ public class MediaUtils {
 	
 		Texture texture = null;
 		try {
-            // Load the wood texture from "res/images/wood.png"
+            // Load the texture 
 			texture = TextureLoader.getTexture("PNG", new FileInputStream(new File("textures/"+name+".png")));
         } catch (IOException e) {
             e.printStackTrace();

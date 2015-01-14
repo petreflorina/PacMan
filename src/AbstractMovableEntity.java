@@ -9,6 +9,8 @@ public abstract class AbstractMovableEntity extends AbstractEntity implements Mo
         super(x, y, width, height);
         this.dx = 0;
         this.dy = 0;
+        this.setX(x);
+        this.setY(y);
     }
 
     @Override
